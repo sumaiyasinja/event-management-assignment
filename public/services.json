@@ -1,0 +1,63 @@
+[
+    {
+      "id": "1",
+      "title": "Venue Rental",
+      "img": "https://example.com/venue.jpg",
+      "price": "$1,500",
+      "details": "Rent a beautiful event venue for your special occasion. Accommodates up to 200 guests.",
+      "location": "123 Main Street, Anytown, USA",
+      "duration": "Full Day (8 hours)",
+      "category_id": "A"
+    },
+    {
+      "id": "2",
+      "title": "Catering Service",
+      "img": "https://example.com/catering.jpg",
+      "price": "$800",
+      "details": "Delicious catering options tailored to your event's theme and dietary preferences.",
+      "menu": ["Appetizers", "Main Course", "Desserts"],
+      "vegetarianOptions": true,
+      "category_id": "B"
+    },
+    {
+      "id": "3",
+      "title": "DJ and Entertainment",
+      "img": "https://example.com/dj.jpg",
+      "price": "$600",
+      "details": "Hire a professional DJ to keep the party going with great music and entertainment.",
+      "musicGenres": ["Pop", "Hip-Hop", "Electronic"],
+      "hoursIncluded": "4 hours",
+      "category_id": "C"
+    },
+    {
+      "id": "4",
+      "title": "Photography",
+      "img": "https://example.com/photography.jpg",
+      "price": "$1,200",
+      "details": "Capture your event's special moments with professional photography services.",
+      "photographer": "Jane Smith",
+      "packageIncludes": ["Pre-event photoshoot", "High-resolution digital images"],
+      "category_id": "D"
+    },
+    {
+      "id": "5",
+      "title": "Decoration Services",
+      "img": "https://example.com/decoration.jpg",
+      "price": "$500",
+      "details": "Transform your venue with beautiful decorations to match your event's theme.",
+      "themeOptions": ["Rustic", "Elegant", "Vintage"],
+      "setupTime": "2 hours",
+      "category_id": "E"
+    },
+    {
+      "id": "6",
+      "title": "Transportation",
+      "img": "https://example.com/transportation.jpg",
+      "price": "$300",
+      "details": "Arrange transportation for your guests to and from the event location.",
+      "vehicleOptions": ["Limousine", "Shuttle Bus", "Vintage Car"],
+      "capacity": "Up to 30 passengers",
+      "category_id": "F"
+    }
+  ]
+  
