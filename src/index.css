@@ -1,3 +1,17 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Recursive:wght@600&family=Roboto:wght@400;500;700;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.navlogo{
+    font-family: 'Great Vibes', cursive;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.bannertext{
+    font-family: 'Recursive', sans-serif;
+}
