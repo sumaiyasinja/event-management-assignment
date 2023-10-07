@@ -18,7 +18,9 @@ const Services = ({services}) => {
 
       {/* card container  */}
 
-      <div className="container grid gap-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-rows-2">
+      <div className="container grid gap-3 grid-cols-1
+       md:grid-cols-2 lg:grid-cols-3
+       ">
         {/* CARD  will add here */}
             {
                 services.map(service => <Service key={service.id} service={service}></Service>)
