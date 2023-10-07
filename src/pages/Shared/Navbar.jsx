@@ -18,7 +18,7 @@ const Navbar = () => {
     // }
 
     return (
-        <div className="navbar bg-[#D6A2E8] rounded-lg">
+        <div className="navbar bg-[#D6A2E8] rounded-lg font-medium text-white text-2xl">
         <div className="navbar-start">
             <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -30,7 +30,6 @@ const Navbar = () => {
             </div>
         </div>
         <div className="navbar-center hidden lg:flex">
-            {/* <p className='navlogo'>Party Planer</p> */}
             <ul className="menu menu-horizontal px-1">
                 {NavLinks}
             </ul>

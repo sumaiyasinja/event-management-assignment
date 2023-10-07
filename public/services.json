@@ -6,18 +6,18 @@
       "price": "$1,200",
       "details": "Capture your event's special moments with professional photography services.",
       "photographer": "Jane Smith",
-      "packageIncludes": ["Pre-event photoshoot", "High-resolution digital images"],
-      "category_id": "D"
+      "packageIncludes": "Pre-event photoshoot, High-resolution digital images",
+      "category_id": "photography"
     },
     {
       "id": "2",
       "title": "Catering Service",
       "img": "https://i.ibb.co/vcyZt5N/catering.jpg",
-      "price": "$800",
+      "price": "$8000",
       "details": "Delicious catering options tailored to your event's theme and dietary preferences.",
-      "menu": ["Appetizers", "Main Course", "Desserts"],
+      "packageIncludes": "Appetizers in menu, Main Course in menu, Desserts in menu",
       "vegetarianOptions": true,
-      "category_id": "B"
+      "category_id": "catering"
     },
     {
       "id": "3",
@@ -25,30 +25,30 @@
       "img": "https://i.ibb.co/wJBpCfb/consert.jpg",
       "price": "$600",
       "details": "Hire a professional DJ to keep the party going with great music and entertainment.",
-      "musicGenres": ["Pop", "Hip-Hop", "Electronic"],
+      "packageIncludes": "Pop Genre, Hip-Hop Genre, Electronic Genre",
       "hoursIncluded": "4 hours",
-      "category_id": "C"
+      "category_id": "music"
     },
     {
       "id": "4",
       "title": "Venue Rental",
       "img": "https://i.ibb.co/Nr9LJcZ/table-1638826-1280.jpg",
-      "price": "$1,500",
+      "price": "$10,500",
       "details": "Rent a beautiful event venue for your special occasion. Accommodates up to 200 guests.",
       "location": "123 Main Street, Anytown, USA",
       "duration": "Full Day (8 hours)",
-      "category_id": "A"
+      "category_id": "Venue_Rental"
     },
    
     {
       "id": "5",
       "title": "Decoration Services",
       "img": "https://i.ibb.co/d6VHtdF/banner.jpg",
-      "price": "$500",
+      "price": "$5000",
       "details": "Transform your venue with beautiful decorations to match your event's theme.",
-      "themeOptions": ["Rustic", "Elegant", "Vintage"],
+      "packageIncludes": "Rustic Theme, Elegant Theme, Vintage Theme",
       "setupTime": "2 hours",
-      "category_id": "E"
+      "category_id": "decoration"
     },
     {
       "id": "6",
@@ -56,9 +56,9 @@
       "img": "https://i.ibb.co/h9rSBnF/pexels-lisa-fotios-1392621.jpg",
       "price": "$300",
       "details": "Arrange transportation for your guests to and from the event location.",
-      "vehicleOptions": ["Limousine", "Shuttle Bus", "Vintage Car"],
+      "packageIncludes": "Limousine vihicle option, Shuttle Bus vihicle option, Vintage Car vihicle option",
       "capacity": "Up to 30 passengers",
-      "category_id": "F"
+      "category_id": "transportation"
     }
   ]
   

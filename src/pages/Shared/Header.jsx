@@ -15,8 +15,8 @@ const Header = () => {
                 </p>
                 <img src="https://i.ibb.co/SwfSbnv/attachment-20786756-removebg-preview.png" 
                 alt="logo" width={200}/>
-                <p className="text-dark-gray">Support <br />  <span className=" text-xl text-lavender font-bold">1800 - 123 456 789</span></p>
-                <button className="bg-lavender  hover:bg-navy-blue text-white font-bold py-2 px-4 rounded">Book Now</button>
+                <p className="text-dark-gray">Support <br /><span className=" text-xl text-lavender font-bold">1800 - 123 456 789</span></p>
+                <button className="bg-lavender  hover:bg-light-navy-blue text-white font-bold py-2 px-4 rounded">Book Now</button>
                 {/* <p className="text-2xl font-bold text-blue-400">MAKE YOUR SPECIAL DAY MORE SPECIAL WITH US</p>
              <p className='text-base text-[#333366 ] capitalize'>{moment().format("dddd, MMMM D, YYYY")}</p> */}
             </div>

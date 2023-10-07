@@ -15,7 +15,7 @@ const Banner = () => {
   }, []);
 
   return (
-    <div className="relative">
+    <div className="relative ">
       <img src="https://i.ibb.co/d6VHtdF/banner.jpg" alt="Banner Image"
        className="w-full bg-cover opacity-70" />
       <p className="absolute top-[30%] left-0 right-0 text-5xl bannertext text-white text-center py-4 bg-opacity-70 bg-transparent">

@@ -7,13 +7,13 @@ const Services = ({services}) => {
     <section className="container mx-auto mb-40 my-7">
            <div className="flex justify-center items-center"><img src="https://i.ibb.co/9G7xYVm/flowers.png" alt="flower" /></div>
         <p className="text-lavender text-center text-3xl font-bold">Our Services</p>
-      <h1 className="headings text-light-navy-blue text-4xl text-center p-2">
+      <h1 className="headings text-light-navy-blue text-4xl text-center p-4 mb-5">
       We Provide The Best Service For Your Event
       </h1>
-      <p className="text-navy-blue text-center text-base p-4 mb-10">
+      {/* <p className="text-navy-blue text-center text-base p-4 mb-10">
       At Little Possum Parties, we take pride in offering top-notch event services that will make your event truly special. Our experienced team is dedicated to ensuring your event is a success, and we pay attention to every detail.
 
-      </p>
+      </p> */}
 
 
       {/* card container  */}
