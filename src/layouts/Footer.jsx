@@ -6,8 +6,8 @@ const Footer = () => {
     return (
         <div className="bg-lavender rounded-t-3xl">
 
-          <footer className="p-4 grid grid-cols-3 gap-4 ">
-            <div className="container mx-auto p-4 space-y-3">
+          <footer className="p-4 grid md:grid-cols-1 lg:grid-cols-3 gap-4 ">
+            <div className="lg:container mx-auto p-4 space-y-3">
               <p className="text-3xl font-bold text-navy-blue">Get in touch</p>
               <p>12356 Glassford Street <br />
               Glasgow New York, USA</p>
@@ -16,7 +16,7 @@ const Footer = () => {
               <div>MdEmail icon hello@yourdomain.tld</div>
             </div>
 
-            <div className="container mx-auto p-4 space-y-3">
+            <div className="container mx-auto p-4 space-y-3 flex flex-col justify-center items-center">
               <img src="https://i.ibb.co/SwfSbnv/attachment-20786756-removebg-preview.png" 
                 alt="logo" width={200}/>
                 <div className="grid grid-flow-col gap-4">
@@ -28,12 +28,11 @@ const Footer = () => {
             </div>
 
 
-            <div className="container mx-auto p-4 space-y-3">
+            <div className="container mx-auto p-4 space-y-3 flex md:block flex-col  items-center ">
               <p className="text-3xl font-bold text-navy-blue">Newsletter.</p>
               <p>Signup for our newsletter to get updated <br />information,insight, or promotions.</p>
               <Link to='/register'>
-
-              <button className="w-full rounded-lg py-3 bg-navy-blue text-white">Sign UP</button>
+              <button className="px-32 md:px-0 w-full rounded-lg py-3  bg-navy-blue text-white">Sign UP</button>
               </Link>
             </div>
           </footer>

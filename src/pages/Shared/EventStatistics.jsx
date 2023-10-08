@@ -13,9 +13,9 @@ const EventStatistics = () => {
           });
       }, []);     
 
-      
+
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-between 
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-between  gap-3
         bg-light-navy-blue p-6 py-9 my-9  rounded-3xl">
             
             {data.map((singledata)=>

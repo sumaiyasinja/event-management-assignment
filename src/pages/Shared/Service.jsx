@@ -21,7 +21,7 @@ const Service = ({ service }) => {
     className={`rounded-lg border border-transparent border-[#E7E7E7]  
     flex justify-center items-center  
     ${
-      id == 1 ?  'col-span-2 row-span-2':'col-span-1 row-span-1' 
+      id == 1 ?  'lg:col-span-2 row-span-2':'col-span-1 row-span-1' 
     }`}
 
       // bg-gradient-to-b from-[#F3F3F3] to-transparent
