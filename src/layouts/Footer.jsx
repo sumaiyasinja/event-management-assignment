@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import LittleFooter from "../pages/Shared/LittleFooter";
 
 const Footer = () => {
@@ -30,7 +31,10 @@ const Footer = () => {
             <div className="container mx-auto p-4 space-y-3">
               <p className="text-3xl font-bold text-navy-blue">Newsletter.</p>
               <p>Signup for our newsletter to get updated <br />information,insight, or promotions.</p>
+              <Link to='/register'>
+
               <button className="w-full rounded-lg py-3 bg-navy-blue text-white">Sign UP</button>
+              </Link>
             </div>
           </footer>
           <LittleFooter></LittleFooter>

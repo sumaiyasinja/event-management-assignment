@@ -2,10 +2,11 @@ import { useContext } from 'react';
 import { FcGoogle } from 'react-icons/fc';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../provider/AuthProvider';
+import toast, { Toaster } from 'react-hot-toast';
 
 const Login = () => {
-    const {user} = useContext(AuthContext)
-    console.log(user)
+    const {loginWithEmailAndPasword,loginWithGoogle} = useContext(AuthContext)
+
     const handleSignIn=(e) =>{
         e.preventDefault()
         console.log(e.currentTarget)
@@ -13,12 +14,23 @@ const Login = () => {
         const email = form.get('email')
         const password = form.get('password')
         console.log('Login Email:' + email)
+
+        loginWithEmailAndPasword(email,password)
+        .then(()=> toast.success("Succefully logged in"))
+        .catch(e=> toast.error(e.message))
+
     }
     const handleGoogleSignIn=(e) =>{
         e.preventDefault()
+        loginWithGoogle()
+        .then(()=> toast.success("Succefully logged in with google."))
+        .catch(e=> toast.error(e.message))
+
     }
     return (
-<div  className="container mx-auto flex justify-center h-[95vh] border-4 border-lavender border-x-fuchsia-100 rounded-xl	">
+        <section>
+            <Toaster  position="top-right"></Toaster>
+            <div  className="container mx-auto flex justify-center h-[95vh] border-4 border-lavender border-x-fuchsia-100 rounded-xl	">
   <div className="flex gap-3 justify-center items-center flex-col rounded-lg">
       <h1 className="text-4xl font-bold text-light-navy-blue text-center">Sign In!</h1>
     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-200 ">
@@ -51,6 +63,9 @@ const Login = () => {
     </div>
   </div>
 </div>
+        </section>
+
+
     );
 };
 

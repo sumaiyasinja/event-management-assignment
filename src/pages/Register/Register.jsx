@@ -1,5 +1,4 @@
 import { useContext } from 'react';
-import { FcGoogle } from 'react-icons/fc';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../provider/AuthProvider';
 import toast, { Toaster } from 'react-hot-toast';
@@ -7,7 +6,7 @@ import toast, { Toaster } from 'react-hot-toast';
 
 
 const Register = () => {
-    const {user,createUserWithEmail} = useContext(AuthContext)
+    const {createUserWithEmail} = useContext(AuthContext)
 
     const handleSignUp=(e) =>{
         e.preventDefault()
