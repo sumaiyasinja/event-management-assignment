@@ -18,9 +18,23 @@ const Register = () => {
         const email = form.get('email')
         const password = form.get('password')
         console.log('Register Email:' + email + "Name : " +name, photoUrl)
+
+        const passwordRequirements = /^(?=.*[A-Z])(?=.*[a-z]).{8,}$/
+
+        if(!passwordRequirements.test(password))
+          { 
+            toast.error("Your password must have at least  one capital letter, one small letter and 8 or more character.",
+            {     style: {
+                  borderRadius: '10px',
+                  background: 'white',
+                  color: 'red',
+                },}
+            )
+            return
+        }
         
         createUserWithEmail(email,password)
-        .then(result => {
+        .then(() => {
             toast.success("Registration Successful !")
         })
         .catch(error => {
@@ -30,9 +44,7 @@ const Register = () => {
 
     }
 
-    const handleGoogleSignIn=(e) =>{
-        e.preventDefault()
-    }
+  
     return (
         <section>
 
@@ -89,8 +101,8 @@ const Register = () => {
         <button className="hover:bg-transparent hover:text-black hover:border hover:border-light-navy-blue cursor-pointer p-3 rounded-lg text-base  bg-light-navy-blue text-white font-bold">Register</button>
       </div>
       <div className="form-control mt-6">
-        <button onClick={handleGoogleSignIn} className="hover:bg-light-navy-blue hover:text-white flex justify-center gap-2 items-center cursor-pointer p-3 rounded-lg text-base border border-light-navy-blue  text-black font-bold">
-          <FcGoogle></FcGoogle>Register with Google</button>
+        {/* <button onClick={handleGoogleSignIn} className="hover:bg-light-navy-blue hover:text-white flex justify-center gap-2 items-center cursor-pointer p-3 rounded-lg text-base border border-light-navy-blue  text-black font-bold">
+          <FcGoogle></FcGoogle>Register with Google</button> */}
           <p className="text-center mt-4">Already have an account? 
           <Link className="text-blue-600 font-bold" to="/login"> Sign In</Link></p>
       </div>
