@@ -1,63 +1,57 @@
-// import { Link, useLocation, useNavigate } from "react-router-dom";
-// import Navbar from "../Shared/Navbar/Navbar"
-// import { useContext } from "react";
-// import { AuthContext } from "../../providers/AuthProvider";
+import { useContext } from 'react';
+import { FcGoogle } from 'react-icons/fc';
+import { Link } from 'react-router-dom';
+import { AuthContext } from '../../provider/AuthProvider';
 
-// const Login = () => {
-//     const {signIn} = useContext(AuthContext)
-    
-//     const location =useLocation()
-//     console.log('location object in loginpage: ',location)
-    
-//     const navigate = useNavigate();
+const Login = () => {
+    const {user} = useContext(AuthContext)
+    console.log(user)
+    const handleSignIn=(e) =>{
+        e.preventDefault()
+        console.log(e.currentTarget)
+        const form = new FormData(e.currentTarget)
+        const email = form.get('email')
+        const password = form.get('password')
+        console.log('Login Email:' + email)
+    }
+    const handleGoogleSignIn=(e) =>{
+        e.preventDefault()
+    }
+    return (
+<div  className="container mx-auto flex justify-center h-[95vh] border-4 border-lavender border-x-fuchsia-100 rounded-xl	">
+  <div className="flex gap-3 justify-center items-center flex-col rounded-lg">
+      <h1 className="text-4xl font-bold text-light-navy-blue text-center">Sign In!</h1>
+    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-200 ">
+      
+      <form onSubmit={handleSignIn} className="card-body " >
+        <div className="form-control">
+          <label className="label">
+            <span className="label-text">Email</span>
+          </label>
+          <input name="email" type="email" placeholder="email" className="input input-bordered" required />
+        </div>
+        <div className="form-control">
+          <label className="label">
+            <span  className="label-text">Password</span>
+          </label>
+          <input name="password" type="password" placeholder="password" className="input input-bordered" required />
+        </div>
+        <div className="form-control mt-6">
+          <button className="hover:bg-transparent hover:text-black hover:border hover:border-lavender cursor-pointer p-3 rounded-lg text-base  bg-lavender text-white font-bold">Login</button>
+        </div>
+        <div className="form-control mt-6">
+          <button onClick={handleGoogleSignIn} className="hover:bg-lavender hover:text-white flex justify-center gap-2 items-center cursor-pointer p-3 rounded-lg text-base border border-lavender  text-black font-bold">
+            <FcGoogle></FcGoogle>Login with Google</button>
+                        <p className="text-center mt-4">Do not have an account? 
+            <Link className="text-blue-600 font-bold" to="/register"> Sign Up</Link></p>
+        </div>
+      </form>
 
-//     const handleLogin = e =>{
-//         e.preventDefault()
-//         console.log(e.currentTarget)
-//         const form = new FormData(e.currentTarget)
-//         const email = form.get('email')
-//         const password = form.get('password')
-//         console.log(email,password)
+      
+    </div>
+  </div>
+</div>
+    );
+};
 
-//         signIn(email,password)
-//         .then(res => {
-//             console.log(res)
-//             navigate(location.state ? location.state :'/')
-//         })
-//         .catch(error => console.log(error))
-//     }
-//     return (
-//         <div>
-//         <Navbar></Navbar>
-//         <div>
-//             <h2 className="text-3xl my-10 text-center">Please Login</h2>
-//             <form onSubmit={handleLogin} className=" md:w-3/4 lg:w-1/2 mx-auto">
-//                 <div className="form-control">
-//                     <label className="label">
-//                         <span className="label-text">Email</span>
-//                     </label>
-//                     <input type="email" required name="email" placeholder="Email" className="input input-bordered" />
-//                 </div>
-//                 <div className="form-control">
-//                     <label className="label">
-//                         <span className="label-text">Password</span>
-//                     </label>
-//                     <input type="password" required name="password" placeholder="Password" className="input input-bordered" />
-//                     <label className="label">
-//                         <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-//                     </label>
-//                 </div>
-//                 <div className="form-control mt-6">
-//                     <button className="btn btn-primary">Login</button>
-//                 </div>
-//             </form>
-//             <p className="text-center mt-4">Do not have an account 
-//             <Link className="text-blue-600 font-bold" to="/register">Register</Link></p>
-//         </div>
-
-//     </div>
-// );
-// };
-    
-
-// export default Login;
+export default Login;

@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 const Banner = () => {
   const [textIndex, setTextIndex] = useState(0);
-  const bannerTexts = ['Birthday', 'Weddings', 'Engamements', 'Catering'];
+  const bannerTexts = ['Birthday', 'Weddings', 'Engamements', ' Anniversaries','Retirement Parties', 'Baby shower'];
 
   useEffect(() => {
     // Create an interval to change the text every few seconds
