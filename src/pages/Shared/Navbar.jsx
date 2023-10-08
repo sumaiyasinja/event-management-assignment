@@ -6,11 +6,11 @@ const Navbar = () => {
     const NavLinks= <>
          <li><NavLink to="/">Home</NavLink></li>
          <li><NavLink to="/about">About US</NavLink></li>
-         <li><NavLink to="/career">Services</NavLink></li>
-         <li><NavLink to="/career">Blog</NavLink></li>
-         <li><NavLink to="/career">Contact Us</NavLink></li>
+         <li><a href="#services">Services</a></li>
+         <li><NavLink to="/blog">Blog</NavLink></li>
+         <li><NavLink to="/contact">Contact Us</NavLink></li>
          {/* team,detail page,user name,profile */}
-    </>
+        </>
     // const handleLogOut =()=>{
     //     logOut()
     //     .then (()=> console.log("logged out."))

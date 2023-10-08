@@ -8,7 +8,9 @@ const ExtraBanner = () => {
             company in New York, USA.
             <br /> ===
             </p>
-            
+            <div data-aos="fade-up"
+     data-aos-anchor-placement="center-bottom">
+</div>
         </div>
 
     );

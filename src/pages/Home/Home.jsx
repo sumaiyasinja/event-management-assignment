@@ -12,7 +12,7 @@ const Home = () => {
        <div>
             <Header></Header>
             <ExtraBanner></ExtraBanner>
-            <Services services={services} key={services.id}></Services>
+            <Services  services={services} key={services.id}></Services>
             <EventStatistics></EventStatistics>
             <Footer></Footer>
        </div>
