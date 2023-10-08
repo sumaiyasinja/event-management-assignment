@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 
 const Service = ({ service }) => {
-  const { id, title, details } = service;
+  const { id, title, details,price } = service;
 
   // style for the background image and overlay
   const cardStyle = {
@@ -38,6 +38,7 @@ const Service = ({ service }) => {
           <h2 className="card-title mb-6 text-3xl text-white navlogo">{title}</h2>
           {/* description */}
           <p className="mb-8">{details}</p>
+          <p className="mb-8 ">{price}</p>
           <div className="card-actions mb-19">
             {/* arrow button */}
             <NavLink to={`/view-details/${id}`}>

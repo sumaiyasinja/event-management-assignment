@@ -18,11 +18,12 @@ const Register = () => {
         const password = form.get('password')
         console.log('Register Email:' + email + "Name : " +name, photoUrl)
 
-        const passwordRequirements = /^(?=.*[A-Z])(?=.*[a-z]).{8,}$/
+        const passwordRequirements = /^(?=.*[A-Z])(?=.*[!@#$%^&*()_+{}[\]:;<>,.?~\\-]).{6,}$/
+
 
         if(!passwordRequirements.test(password))
           { 
-            toast.error("Your password must have at least  one capital letter, one small letter and 8 or more character.",
+            toast.error("Your password should contain at least one uppercase letter, one special character, and be 6 characters or longer.",
             {     style: {
                   borderRadius: '10px',
                   background: 'white',

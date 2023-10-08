@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 const EventStatistic = ({singledata}) => {
-    console.log(singledata)
+    // console.log(singledata)
     return (
         <div className='flex flex-col items-center'>
             <p className='text-5xl font-semibold text-gold'>  {singledata.count}</p>
