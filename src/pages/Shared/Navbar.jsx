@@ -3,6 +3,7 @@ import { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../provider/AuthProvider';
 import toast, { Toaster } from 'react-hot-toast';
+import Team from './../Team';
 
 const Navbar = () => {
 const {user,logOut} = useContext(AuthContext)    
@@ -12,6 +13,7 @@ const NavLinks= <>
          <li><NavLink to="/about">About US</NavLink></li>
          <li><NavLink to="/dashboard">Dashboard</NavLink></li>
          <li><NavLink to="/view-details/1">Top Service</NavLink></li>
+         <li><NavLink to="/ourteam">Our Team</NavLink></li>
 
         </>
  

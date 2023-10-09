@@ -1,12 +1,11 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import Navbar from "./Navbar";
-import Footer from "../../layouts/Footer";
 import LittleFooter from "./LittleFooter";
 
 const ServiceDetails = () => {
     const { id } = useParams();
     const services = useLoaderData();
-    const service = services.find(service => service.id == id);
+    const service = services?.find(serve => (serve?.id == id));
     const { title, details, img,price } = service;
     console.log(service);
 

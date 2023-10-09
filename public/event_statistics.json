@@ -3,27 +3,22 @@
     {
       "id": 1,
       "count": "172+",
-      "label": "Event Done",
-      "icon": "event-icon.png"
+      "label": "Event Done"
     },
     {
       "id": 2,
       "count": "15 TH",
-      "label": "Years Of Experience",
-      "icon": "https://i.ibb.co/mTk3r0g/quality-icon-png-16.png"
+      "label": "Years Of Experience"
     },
     {
       "id": 3,
       "count": "250+",
-      "label": "Happy Clients",
-      "icon": "https://whttps://cdn.onlinewebfonts.com/Downloads/20231008/cb/OnlineWebFonts_COM_Icons_cbd98be9581250d285778ef2cd17a222.zipww.onlinewebfonts.com/icon"
-
+      "label": "Happy Clients"
     },
     {
       "id": 4,
       "count": "80+",
-      "label": "Trusted Vendor",
-      "icon": "vendor-icon.png"
+      "label": "Trusted Vendor"
     }
   ]
 }

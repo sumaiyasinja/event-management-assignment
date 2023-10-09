@@ -22,8 +22,8 @@ const Services = ({services}) => {
        md:grid-cols-2 lg:grid-cols-3
        ">
         {/* CARD  will add here */}
-            {
-                services.map(service => <Service key={service.id} service={service}></Service>)
+            { services &&
+                services?.map(service => <Service key={service?.id} service={service}></Service>)
             }
         {/* Add more card components for other services */}
       </div>

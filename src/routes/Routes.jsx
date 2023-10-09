@@ -8,6 +8,7 @@ import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import UserDashboard from "../pages/Shared/UserDashboard/UserDashboard";
 import PrivateRoutes from "./PrivateRoutes";
+import Team from "../pages/Team";
 
 
 const router = createBrowserRouter([
@@ -19,12 +20,12 @@ const router = createBrowserRouter([
       {
           path: '/',
           element: <Home></Home>,
-          loader: () => fetch('/public/services.json'), 
+          loader: () => fetch('/services.json'), 
       },
       {
           path: '/view-details/:id',
           element: <PrivateRoutes><ServiceDetails></ServiceDetails></PrivateRoutes>,
-          loader: () => fetch('/public/services.json'), 
+          loader: () => fetch('/services.json'), 
       },
       {
         path: '/about',
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
       {
         path: '/dashboard',
         element: <PrivateRoutes><UserDashboard></UserDashboard></PrivateRoutes>
+      },
+      {
+        path: '/ourteam',
+        element: <PrivateRoutes><Team></Team></PrivateRoutes>
       },
 
  

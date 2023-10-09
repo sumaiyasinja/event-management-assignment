@@ -7,12 +7,11 @@ const Banner = () => {
   useEffect(() => {
     // Create an interval to change the text every few seconds
     const interval = setInterval(() => {
-      setTextIndex((prevIndex) => (prevIndex + 1) % bannerTexts.length);
+      setTextIndex((prevIndex) => (prevIndex + 1) % bannerTexts?.length);
     }, 3000); // Change text every 3 seconds
 
-    // Clear the interval when the component unmounts
     return () => clearInterval(interval);
-  }, []);
+  }, [bannerTexts?.length]);
 
   return (
     <div className="relative ">

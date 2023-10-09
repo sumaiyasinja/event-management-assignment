@@ -12,7 +12,7 @@ const About = () => {
     const [data,setData] = useState([])
 
     useEffect(()=>{
-        fetch('../../../public/event_statistics.json')
+        fetch('/event_statistics.json')
         .then(res => res.json())
         .then(data => {
             setData(data.data)
@@ -31,8 +31,8 @@ const About = () => {
             <p  className="text-5xl text-light-navy-blue font-semibold text-center m-20">Our Company State</p>
             <div data-aos="fade-right" className="flex flex-col md:flex-row justify-between items-center ">
 
-                {
-                    data.map((singledata)=>(
+                { data && data.length &&
+                    data?.map((singledata)=>(
                         <div className="flex flex-col items-center text-2xl space-y-6 font-semibold text-light-navy-blue"
                          key={singledata?.id}>
                             {/* <img src={singledata?.icon} alt="{singledata?.label}" /> */}

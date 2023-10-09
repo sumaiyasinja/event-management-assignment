@@ -1,6 +1,7 @@
 import Banner from "./Banner";
 import Navbar from "./Navbar";
 import moment from 'moment';
+import Services from './Services';
 
 const Header = () => {
     return (
@@ -19,7 +20,7 @@ const Header = () => {
 
                 <p className="text-dark-gray">Support <br /><span className=" text-xl text-lavender font-bold">1800 - 123 456 789</span></p>
                 <button  className="hidden lg:block bg-lavender  hover:bg-light-navy-blue text-white font-bold py-2 px-4 rounded">
-                    <a href="#services">Book Now</a>
+                    <a href="#services">Get Services</a>
                 </button>
                 {/* <p className="text-2xl font-bold text-blue-400">MAKE YOUR SPECIAL DAY MORE SPECIAL WITH US</p>
              <p className='text-base text-[#333366 ] capitalize'>{moment().format("dddd, MMMM D, YYYY")}</p> */}
@@ -27,7 +28,7 @@ const Header = () => {
             </div>
             <Navbar></Navbar>
 
-            {/* Bnner */}
+            {/* Banner */}
            <Banner></Banner>
         </div>
     );

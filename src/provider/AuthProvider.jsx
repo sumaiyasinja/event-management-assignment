@@ -25,17 +25,7 @@ const AuthProvider = ({children}) => {
         setLoading(true)
         return signInWithPopup(auth, googleProvider)
     }
-    const updatePhotoURL=()=>{
-        updateProfile(auth.currentUser, {
-            displayName: "Jane Q. User", photoURL: "https://example.com/jane-q-user/profile.jpg"
-          }).then(() => {
-            // Profile updated!
-            // ...
-          }).catch((error) => {
-            // An error occurred
-            // ...
-          });
-    }
+
     const logOut=()=>{
         setLoading(true)
         signOut(auth)   
@@ -60,7 +50,6 @@ const AuthProvider = ({children}) => {
         loginWithEmailAndPasword,
         loginWithGoogle,
         logOut,
-        updatePhotoURL,
     }
 
     

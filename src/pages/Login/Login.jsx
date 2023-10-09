@@ -7,8 +7,8 @@ import { useLocation } from 'react-router-dom';
 import Navbar from '../Shared/Navbar';
 
 const Login = () => {
+  const {loginWithEmailAndPasword,loginWithGoogle} = useContext(AuthContext)
     const navigate = useNavigate()
-    const {loginWithEmailAndPasword,loginWithGoogle} = useContext(AuthContext)
     const location =useLocation()
     console.log('location object in loginpage: ',location)
 
@@ -27,7 +27,7 @@ const Login = () => {
         .then(()=> {
           toast.success("Succefully logged in")
           
-          navigate(location.state ? location.state :'/')
+          navigate(location?.state ? location?.state :'/')
       })
         .catch(e=> toast.error(e.message))
 
