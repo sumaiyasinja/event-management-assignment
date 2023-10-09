@@ -1,11 +1,18 @@
 import { useContext } from 'react';
 import { FcGoogle } from 'react-icons/fc';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../provider/AuthProvider';
 import toast, { Toaster } from 'react-hot-toast';
+import { useLocation } from 'react-router-dom';
 
 const Login = () => {
+    const navigate = useNavigate()
     const {loginWithEmailAndPasword,loginWithGoogle} = useContext(AuthContext)
+    const location =useLocation()
+    console.log('location object in loginpage: ',location)
+
+
+    console.log(location)
 
     const handleSignIn=(e) =>{
         e.preventDefault()
@@ -16,14 +23,21 @@ const Login = () => {
         console.log('Login Email:' + email)
 
         loginWithEmailAndPasword(email,password)
-        .then(()=> toast.success("Succefully logged in"))
+        .then(()=> {
+          toast.success("Succefully logged in")
+          
+          navigate(location.state ? location.state :'/')
+      })
         .catch(e=> toast.error(e.message))
 
     }
     const handleGoogleSignIn=(e) =>{
         e.preventDefault()
         loginWithGoogle()
-        .then(()=> toast.success("Succefully logged in with google."))
+        .then(()=> {
+          toast.success("Succefully logged in with google.")
+          navigate(location.state ? location.state :'/')
+      })
         .catch(e=> toast.error(e.message))
 
     }

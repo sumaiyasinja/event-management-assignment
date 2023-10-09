@@ -4,6 +4,8 @@ import { BiHappyBeaming } from 'react-icons/bi';
 import { FaUserFriends } from 'react-icons/fa';
 import { SiTrustpilot } from 'react-icons/si';
 import Navbar from "./Navbar";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 const About = () => {
@@ -16,11 +18,18 @@ const About = () => {
             setData(data.data)
         })
     },[])
+    useEffect(() => {
+        AOS.init({
+          duration: 1000, // Animation duration in milliseconds
+          easing: 'ease-in-out', // Animation timing function
+        });
+      }, []);
+
     return (
         <div className="">  
         <Navbar></Navbar>
-            <p className="text-5xl text-light-navy-blue font-semibold text-center m-20">Our Company State</p>
-            <div className="flex flex-col md:flex-row justify-between items-center ">
+            <p  className="text-5xl text-light-navy-blue font-semibold text-center m-20">Our Company State</p>
+            <div data-aos="fade-right" className="flex flex-col md:flex-row justify-between items-center ">
 
                 {
                     data.map((singledata)=>(

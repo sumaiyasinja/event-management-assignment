@@ -17,7 +17,7 @@ const Service = ({ service }) => {
   };
 
   return (
-    <div
+    <div data-aos="zoom-in-right" 
     className={`rounded-lg border border-transparent border-[#E7E7E7]  
     flex justify-center items-center  
     ${

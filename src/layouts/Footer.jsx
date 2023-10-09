@@ -31,8 +31,8 @@ const Footer = () => {
             <div className="container mx-auto p-4 space-y-3 flex md:block flex-col  items-center ">
               <p className="text-3xl font-bold text-navy-blue">Newsletter.</p>
               <p>Signup for our newsletter to get updated <br />information,insight, or promotions.</p>
-              <Link to='/register'>
-              <button className="px-32 md:px-0 w-full rounded-lg py-3  bg-navy-blue text-white">Sign UP</button>
+              <Link to='/login'>
+              <button className="px-32 md:px-0 w-full rounded-lg py-3  bg-navy-blue text-white">Subscribe</button>
               </Link>
             </div>
           </footer>

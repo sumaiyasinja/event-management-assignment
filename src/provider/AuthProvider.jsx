@@ -26,10 +26,24 @@ const AuthProvider = ({children}) => {
         return signInWithPopup(auth, googleProvider)
     }
     const logOut=()=>{
+        setLoading(true)
         signOut(auth)    }
+    
+    useEffect(()=>{
+        const unsubscribe =onAuthStateChanged(auth , currentUser =>{
+        setUser(currentUser)
+        console.log(currentUser)
+        setLoading(false)
+
+        })
+            return () => {
+            unsubscribe()
+        }
+    },[])    
 
     const authProps= {
         user,
+        loading,
         createUserWithEmail,
         loginWithEmailAndPasword,
         loginWithGoogle,

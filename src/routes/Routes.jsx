@@ -6,6 +6,8 @@ import ServiceDetails from './../pages/Shared/ServiceDetails';
 import About from "../pages/Shared/About";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
+import UserDashboard from "../pages/Shared/UserDashboard/UserDashboard";
+import PrivateRoutes from "./PrivateRoutes";
 
 
 const router = createBrowserRouter([
@@ -35,6 +37,10 @@ const router = createBrowserRouter([
       {
         path: '/register',
         element: <Register></Register>
+      },
+      {
+        path: '/dashboard',
+        element: <PrivateRoutes><UserDashboard></UserDashboard></PrivateRoutes>
       },
 
  
