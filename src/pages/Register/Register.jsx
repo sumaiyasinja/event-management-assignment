@@ -6,7 +6,7 @@ import toast, { Toaster } from 'react-hot-toast';
 
 
 const Register = () => {
-    const {createUserWithEmail} = useContext(AuthContext)
+    const {createUserWithEmail,updatePhotoURL} = useContext(AuthContext)
 
     const handleSignUp=(e) =>{
         e.preventDefault()
@@ -35,12 +35,14 @@ const Register = () => {
         
         createUserWithEmail(email,password)
         .then(() => {
-            toast.success("Registration Successful !")
+          toast.success("Registration Successful !")
         })
         .catch(error => {
-            toast.error(error.message)
+          toast.error(error.message)
         })
         
+        updatePhotoURL()
+      
 
     }
 
@@ -72,7 +74,7 @@ const Register = () => {
 <div className="flex gap-3 justify-center items-center flex-col rounded-lg">
     <h1 className="text-3xl font-bold text-light-navy-blue text-center">Sign Up!</h1>
   <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-200 ">
-    <form onSubmit={handleSignUp} className=" md:p-5 " >
+    <form onSubmit={handleSignUp} className=" px-3 md:p-5  " >
       <div className="form-control">
         <label className="label">
           <span className="label-text">Name</span>
@@ -100,10 +102,10 @@ const Register = () => {
       <div className="form-control mt-6">
         <button className="hover:bg-transparent hover:text-black hover:border hover:border-light-navy-blue cursor-pointer p-3 rounded-lg text-base  bg-light-navy-blue text-white font-bold">Register</button>
       </div>
-      <div className="form-control mt-6">
+      <div className="form-control mt-3">
         {/* <button onClick={handleGoogleSignIn} className="hover:bg-light-navy-blue hover:text-white flex justify-center gap-2 items-center cursor-pointer p-3 rounded-lg text-base border border-light-navy-blue  text-black font-bold">
           <FcGoogle></FcGoogle>Register with Google</button> */}
-          <p className="text-center mt-4">Already have an account? 
+          <p className="text-center m-0">Already have an account? 
           <Link className="text-blue-600 font-bold" to="/login"> Sign In</Link></p>
       </div>
     </form>

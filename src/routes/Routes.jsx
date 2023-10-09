@@ -23,7 +23,7 @@ const router = createBrowserRouter([
       },
       {
           path: '/view-details/:id',
-          element: <ServiceDetails></ServiceDetails>,
+          element: <PrivateRoutes><ServiceDetails></ServiceDetails></PrivateRoutes>,
           loader: () => fetch('/public/services.json'), 
       },
       {

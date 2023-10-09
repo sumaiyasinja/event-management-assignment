@@ -11,16 +11,13 @@ const NavLinks= <>
          <li><NavLink to="/">Home</NavLink></li>
          <li><NavLink to="/about">About US</NavLink></li>
          <li><NavLink to="/dashboard">Dashboard</NavLink></li>
-         {/* <li><a href="#services">Services</a></li> */}
-         {/* <li><NavLink to="/blog">Blog</NavLink></li> */}
-         {/* <li><NavLink to="/contact">Contact Us</NavLink></li> */}
-         {/* team,detail page,user name,profile */}
+         <li><NavLink to="/view-details/1">Top Service</NavLink></li>
+
         </>
  
-    const handleLogOut =()=>{
+    const handleLogOut =()=>{        
         logOut()
         .then (()=> {
-            console.log('success logging out')
             toast.success("logged out successfully.")
         })
         .catch(error => {
@@ -53,11 +50,14 @@ const NavLinks= <>
         </div>
         <div className="navbar-end text-sm gap-3">
             {user ?             
+                <div className='flex flex-col items-center'>
                     <div className="avatar">
                     <div className="w-12 rounded-full border border-white">
                     <img src={user?.photoURL} alt="Profile" />
                     </div>
                     </div>
+                    <div>{user?.displayName}</div>
+                </div>
                 :
                 <div className="avatar">
                     <div className="w-12 rounded-full">
