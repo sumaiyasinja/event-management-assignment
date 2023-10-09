@@ -1,8 +1,13 @@
-# React + Vite
+## Website Name: Little Possum Parties
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Live Website Link
+[Website Link](#)   <!-- Insert the actual live website link here -->
 
-Currently, two official plugins are available:
+## Main Features
+- **Login Registration Authentication System with email and password:** Users can register and log in using their email and password.
+- **Google Authentication:** Users can also use Google to log in.
+- **Six Top-Class Services:** We offer 6 top-class services for your events. Access to these services is available after signing in, as these pages are protected.
+- **Responsive Design:** The website is designed to be responsive, ensuring a seamless experience on various devices.
+- **About Page:** Explore our About page to learn more about the company and view statistics from JSON data.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<!-- ## Getting Started -->

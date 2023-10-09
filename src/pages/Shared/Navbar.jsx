@@ -39,7 +39,7 @@ const NavLinks= <>
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
                     </svg>
                 </label>
-                <ul tabIndex={0} className="menu menu-sm dropdown-content bg-lavender text-black mt-3 z-[1] p-2 shadow rounded-box w-52">
+                <ul tabIndex={0} className="menu menu-sm dropdown-content bg-lavender text-white mt-3 z-[1] p-2 shadow rounded-box w-52">
                     {NavLinks}
                 </ul>
             </div>
