@@ -1,7 +1,7 @@
 ## Website Name: Little Possum Parties
 
 ## Live Website Link
-[Website Link](#https://event-management-teamsinja.web.app)   
+[Website Link](https://event-management-teamsinja.web.app)   
 
 ## Main Features
 - **Login Registration Authentication System with email and password:** Users can register and log in using their email and password.

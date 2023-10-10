@@ -63,7 +63,8 @@ const Register = () => {
 
   
     return (
-        <section>
+      <section>
+        <Navbar></Navbar>
           <Toaster
               position="top-right"
               toastOptions={{   
@@ -83,11 +84,10 @@ const Register = () => {
               },
             }}
             />      
-            <div  className="container mx-auto flex justify-center md:h-[100%] md:border-4 border-light-navy-blue border-x-fuchsia-100 rounded-xl	">
+            <div  className="my-2 container mx-auto flex justify-center md:h-[100%] md:border-4 border-light-navy-blue border-x-fuchsia-100 rounded-xl	">
 
-            <Navbar></Navbar>
           <div className="flex gap-3 justify-center items-center flex-col rounded-lg">
-              <h1 className="text-3xl font-bold text-light-navy-blue text-center">Sign Up!</h1>
+              <h1 className="text-3xl font-bold text-light-navy-blue pt-2 text-center">Sign Up!</h1>
             <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-200 ">
               <form onSubmit={handleSignUp} className=" px-3 md:p-5  " >
                 <div className="form-control">
